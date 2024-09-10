@@ -1,0 +1,234 @@
+/* Ensure form labels are white */
+.form-label {
+    color: var(--color-body) !important;
+}
+
+/* Other existing styles */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #FFFFFF; /* White for text */
+    --color-heading: #FFFFFF; /* White for headings */
+    --color-base: #1C1C1C; /* Dark background */
+    --color-base2: #2C2C2C; /* Darker gray for secondary background */
+    --color-brand: #007AFF; /* Blue for accents */
+    --color-brand2: #005BB5; /* Darker blue for hover states */
+    --sidebar-width: 240px;
+    --font-base: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-base);
+    color: var(--color-body);
+    font-family: var(--font-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base2);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    background-color: var(--color-base2);
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    color: var(--color-body);
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+.navbar-brand span {
+    color: var(--color-heading);
+    font-family: var(--font-base);
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border-color: var(--color-heading);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidebar-width);
+    }
+
+    #content-wrapper {
+        padding-left: var(--sidebar-width);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border: none;
+    color: var(--color-base);
+}
+
+.btn-brand:hover, .btn-brand:focus {
+    background-color: var(--color-brand2);
+}
+
+/* Chat Styles */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-base);
+    color: var(--color-body);
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: var(--color-base2);
+}
+
+.chat-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.chat-message.sent {
+    align-self: flex-end;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.chat-message.received {
+    align-self: flex-start;
+    background-color: var(--color-body);
+    color: var(--color-base);
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: var(--color-base2);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    border-radius: 5px;
+}
+
+/* Login and Register Page */
+.login-page, .register-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-base);
+    color: var(--color-body);
+}
+
+.login-page h2, .register-page h2 {
+    color: var(--color-heading);
+    margin-bottom: 20px;
+}
+
+.login-page form, .register-page form {
+    background-color: var(--color-base2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-page form input, .register-page form input, .register-page form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-base);
+    color: var(--color-body);
+}
+
+.login-page form button, .register-page form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-page form button:hover, .register-page form button:hover {
+    background-color: var(--color-brand2);
+}
